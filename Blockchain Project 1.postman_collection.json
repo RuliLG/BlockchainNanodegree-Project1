@@ -1,0 +1,125 @@
+{
+	"info": {
+		"_postman_id": "34c6f68d-0a73-46ca-b045-8827982fda04",
+		"name": "Blockchain Project 1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get block",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/block/0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"block",
+						"0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Request validation",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"address\": \"mr1rNWfakrHb1Jhyrusop69fzmCfftfML7\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/requestValidation",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"requestValidation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Submit Star",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"address\": \"mr1rNWfakrHb1Jhyrusop69fzmCfftfML7\",\n    \"signature\": \"IAq8tzT9h0oQf5A6r3FKULUPL+IRlBDf02rZlwIu7IcVfbfVBwgbZfYx8DlRBwWFN3BRVUNzlODNhIO8PMXedlU=\",\n    \"message\": \"mr1rNWfakrHb1Jhyrusop69fzmCfftfML7:1607873197:starRegistry\",\n    \"star\": {\n        \"dec\": \"68º 52' 56.9\",\n        \"ra\": \"16h 29m 1.0s\",\n        \"story\": \"Testing the story 4\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/submitStar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"submitStar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "My Stars",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/blocks/mr1rNWfakrHb1Jhyrusop69fzmCfftfML7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"blocks",
+						"mr1rNWfakrHb1Jhyrusop69fzmCfftfML7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Validate chain",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/validateChain",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"validateChain"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
