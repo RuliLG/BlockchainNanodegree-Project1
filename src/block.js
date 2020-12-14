@@ -36,6 +36,8 @@ class Block {
      *  Note: to access the class values inside a Promise code you need to create an auxiliary value `let self = this;`
      */
     validate() {
+        // let self = this; <-- Removed because Arrow Functions don't modify the scope of the variable,
+        // so I can still use `this`
         return new Promise((resolve, reject) => {
             // Save in auxiliary variable the current block hash
             const currentHash = this.hash;
